@@ -130,6 +130,29 @@ body>header,body>main,body>section,body>footer{position:relative;z-index:1}
   .motto-image:after{left:14px;bottom:14px;font-size:13px;padding:9px 13px}
 }
 
+
+/* Final v1.0 narrow-phone polish — iPhone 13 portrait baseline */
+@media(max-width:600px){
+  /* Do not preserve desktop columns on a narrow phone. */
+  .hero-grid,.story,.impact{grid-template-columns:minmax(0,1fr) !important;gap:28px !important;}
+
+  /* Keep the first-screen message strong without orphaning the last character. */
+  .display{font-size:34px !important;line-height:1.22 !important;letter-spacing:.015em !important;}
+  .hero-photo{max-width:100% !important;}
+  .hero-photo .frame,.hero-photo .frame img{height:auto !important;min-height:0 !important;}
+  .hero-photo .frame img{aspect-ratio:4/3;object-fit:cover;}
+  .hero-photo .brand-core-badge{left:14px !important;right:auto;bottom:14px !important;max-width:calc(100% - 28px);padding:14px 16px !important;}
+  .hero-photo .brand-core-badge b{font-size:27px !important;}
+  .hero-photo .brand-core-badge span{font-size:14px !important;line-height:1.45 !important;letter-spacing:.06em !important;}
+
+  /* Story and education-history sections become true reading layouts on phones. */
+  .story-photo,.impact-photo{max-width:100% !important;width:100% !important;margin:0 !important;}
+  .story-photo img,.impact-photo img{display:block;width:100% !important;height:auto !important;min-height:0 !important;max-height:none !important;object-fit:contain !important;}
+  .story-copy,.impact-copy{width:100%;min-width:0;padding:24px !important;}
+  .story-copy h3,.impact-copy h3{font-size:30px !important;line-height:1.35 !important;}
+  .story-copy p,.impact-copy p{line-height:1.9;}
+  .motto{font-size:23px !important;line-height:1.55 !important;}
+}
 </style>
 </head>
 <body>
